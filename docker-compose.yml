@@ -1,0 +1,4 @@
+app:
+  image: codextremist/ruby-2.1.5-gems
+  volumes:
+    - .:/app
