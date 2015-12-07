@@ -8,10 +8,10 @@ require 'sparkpost_client/version'
 Gem::Specification.new do |spec|
   spec.name          = "sparkpost_client"
   spec.version       = SparkpostClient::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["Felipe JAPM"]
+  spec.email         = ["felipe.japm@gmail.com"]
+  spec.summary       = %q{A Sparkpost client}
+  spec.description   = %q{A Sparkpost client}
   spec.homepage      = ""
   spec.license       = "MIT"
 
