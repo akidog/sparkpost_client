@@ -1,5 +1,6 @@
 module SparkpostClient
 		class Railtie < Rails::Railtie
+      binding.pry
 			initializer "sparkpost_client.add_delivery_method" do
 				ActiveSupport.on_load :action_mailer do
 					ActionMailer::Base.add_delivery_method :sparkpost, SparkpostClient::Rails::DeliveryAgent, return_response: true
