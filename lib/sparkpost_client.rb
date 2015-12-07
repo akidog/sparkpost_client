@@ -6,6 +6,7 @@ require 'sparkpost_client/connection'
 require 'pry'
 
 if defined?(Rails)
+  binding.pry
 	require 'sparkpost_client/rails/stored_template_delivery_agent'
 	require 'sparkpost_client/rails/railtie'
 end
