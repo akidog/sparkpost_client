@@ -7,11 +7,11 @@ require 'sparkpost_client/rails/stored_template_delivery_agent'
 require 'sparkpost_client/railtie'
 require 'pry'
 
-#if defined?(Rails)
-  #binding.pry
-	#require 'sparkpost_client/rails/stored_template_delivery_agent'
-	#require 'sparkpost_client/rails/railtie'
-#end
+if defined?(Rails)
+  binding.pry
+	require 'sparkpost_client/rails/stored_template_delivery_agent'
+	require 'sparkpost_client/rails/railtie'
+end
 
 module SparkpostClient
 
