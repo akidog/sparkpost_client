@@ -1,5 +1,4 @@
 module SparkpostClient
-	module Rails
 		class Railtie < Rails::Railtie
 			initializer "sparkpost_rails.add_delivery_method" do
 				ActiveSupport.on_load :action_mailer do
@@ -8,5 +7,4 @@ module SparkpostClient
 				end
 			end
 		end
-	end
 end
