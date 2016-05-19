@@ -5,7 +5,6 @@ require 'active_support/core_ext/hash/deep_merge'
 
 require 'sparkpost_client/connection'
 require 'sparkpost_client/rails/stored_template_delivery_agent'
-require 'pry'
 require 'sparkpost_client/railtie' if defined?(Rails)
 
 module SparkpostClient
