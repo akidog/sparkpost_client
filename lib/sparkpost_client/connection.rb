@@ -4,7 +4,7 @@ module SparkpostClient
     SPARKPOST_ENDPOINT       = "https://api.sparkpost.com/api"
     SPARKPOST_ELITE_ENDPOINT = "https://%{domain}.msyscloud.com/api"
 
-    attr_accessor :elite_domain, :api_version, :api_key, :debug
+    attr_accessor :elite_domain, :api_version, :api_key, :debug, :use_sink_hole
     attr_reader :defaults
 
     def initialize(api_version='v1')

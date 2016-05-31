@@ -7,12 +7,14 @@ module SparkpostClient
        end
 
       def deliver!(mail)
+
+        @client = SparkpostClient::connection
+
         json = parse_json!(mail.body.to_s)
 
         recipients = mail.to.each_with_index.map do |email, i|
           {
-            "address" => email
-            #"name" => mail[:to].display_names[i]
+            "address" => @client.use_sink_hole ? "#{email}.sink.sparkpostmail.com" : email
           }
         end
 
@@ -24,13 +26,11 @@ module SparkpostClient
             "email" => mail.from.first
           },
           "subject" => mail.subject
-          #"reply_to" => mail.reply_to.try(:first)
         }
 
         json.merge!(recipients)
         json.deep_merge!(content)
 
-        @client = SparkpostClient::connection
         @client.transmissions(json)
       end
 
